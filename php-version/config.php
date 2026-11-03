@@ -1,7 +1,7 @@
 <?php
 /**
  * Slim ADVANCE - Archivo de Configuración Global (PHP)
- * Modifica fácilmente números, redes sociales y catálogo de productos aquí.
+ * Catálogo completo sincronizado con la carpeta oficial negocioslim.
  */
 
 // Teléfono WhatsApp empresarial (Código de país +51 Perú + 9 dígitos)
@@ -21,8 +21,9 @@ define('SITE_TAGLINE', '#SlimAdvanceTúAliado');
 define('SITE_URL', 'https://tu-usuario.github.io/slim-advance');
 define('CURRENCY_SYMBOL', 'S/');
 define('CURRENCY_CODE', 'PEN');
+define('SCHEDULE_INFO', 'Lunes a Sábado de 9:00 a.m. a 6:00 p.m.');
 
-// Catálogo de Productos Oficial
+// Catálogo Completo de Productos Oficial (8 Planes)
 $products = [
     [
         'id' => 'super-pack-15',
@@ -43,6 +44,45 @@ $products = [
             '1 Ice Therapy NF (Gel criogénico modelador 250g)'
         ],
         'popular' => true
+    ],
+    [
+        'id' => 'super-pack-30-ice',
+        'name' => 'SUPER PACK X30 DÍAS + ICE THERAPY',
+        'tagline' => '#SlimAdvanceTúAliado',
+        'category' => 'super-packs',
+        'price' => 310,
+        'duration' => '30 Días',
+        'badge' => '🌟 PACK COMPLETO CON CRIOTERAPIA',
+        'image' => 'assets/images/super-pack-30-dias-ice-therapy.jpg',
+        'shortDesc' => 'Mes completo de tratamiento intensivo con gel criogénico modelador Ice Therapy NF incluido.',
+        'fullDesc' => 'El plan mensual más solicitado para perder peso y reducir medidas. Incluye el tratamiento oral de Slim ADVANCE, el té Thermote, el tratamiento detox con limpieza de colon y el gel Ice Therapy NF para potenciar la quema de grasa localizada y evitar flacidez.',
+        'includes' => [
+            '1 Slim ADVANCE (Tratamiento para 30 días)',
+            '1 Thermote Premium (té dietético adelgazante natural)',
+            '1 Pack Detox',
+            '1 Limpia Colon (limpia y desintoxica tu colon)',
+            '1 Ice Therapy NF (Gel modelador de acción criogénica 250g)'
+        ],
+        'popular' => true
+    ],
+    [
+        'id' => 'super-pack-30',
+        'name' => 'SUPER PACK X30 DÍAS (CLÁSICO)',
+        'tagline' => '#SlimAdvanceTúAliado',
+        'category' => 'super-packs',
+        'price' => 280,
+        'duration' => '30 Días',
+        'badge' => '🔥 TRATAMIENTO MES COMPLETO',
+        'image' => 'assets/images/super-pack-30-dias.jpg',
+        'shortDesc' => 'Tratamiento integral de 30 días para una transformación progresiva y desintoxicación total.',
+        'fullDesc' => 'Pack mensual diseñado para quienes buscan una desintoxicación profunda y quema de grasa constante durante 30 días sin gel criogénico. Resultados comprobados y acompañamiento continuo.',
+        'includes' => [
+            '1 Slim ADVANCE (cápsulas)',
+            '1 Thermote Premium (té quemagrasa natural)',
+            '1 Pack Detox',
+            '1 Limpia Colon'
+        ],
+        'popular' => false
     ],
     [
         'id' => 'super-pack-7',
@@ -70,7 +110,7 @@ $products = [
         'category' => 'trio-completo',
         'price' => 360,
         'duration' => '30 Días',
-        'badge' => '🔥 MÁXIMA PÉRDIDA: 8 A 12 KG/MES',
+        'badge' => '🏆 MÁXIMA PÉRDIDA: 8 A 12 KG/MES',
         'image' => 'assets/images/trio-mega-slim-completo.jpg',
         'shortDesc' => 'Tratamiento integral de 30 días con moldeador térmico Xtreme Gold para una transformación total.',
         'fullDesc' => 'Nuestro tratamiento más potente y completo para un mes entero. Con este trío podrás reducir medidas drásticamente y bajar entre 8kg y 12kg al mes siguiendo las indicaciones con asesoramiento continuo.',
@@ -126,7 +166,7 @@ $products = [
         'category' => 'planes-basicos',
         'price' => 230,
         'duration' => '30 Días',
-        'badge' => '🏆 MES COMPLETO RECOMENDADO',
+        'badge' => '🥇 MES COMPLETO RECOMENDADO',
         'image' => 'assets/images/tratamientos-planes-basicos.jpg',
         'shortDesc' => 'Tratamiento clásico mensual completo de 30 días con pastillas y limpieza de colon.',
         'fullDesc' => 'Tratamiento integral de 1 mes completo con 30 pastillas de Slim Advance y desintoxicación de colon. Garantiza una pérdida de peso progresiva, natural y duradera sin efecto rebote.',

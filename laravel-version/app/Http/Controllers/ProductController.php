@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     /**
-     * Muestra la página informativa y catálogo de Slim ADVANCE
+     * Muestra la página informativa y catálogo completo de Slim ADVANCE (8 Planes)
      */
     public function index()
     {
@@ -19,7 +19,8 @@ class ProductController extends Controller
             'instagram' => 'https://www.instagram.com/slim_advance_peru?igsh=MW5mYzNhcmZqbXU1Ng%3D%3D&utm_source=qr',
             'tiktok' => 'https://www.tiktok.com/@slim_advance_peru?_r=1&_t=ZS-9AxsiM5nB3Q',
             'instagram_handle' => '@slim_advance_peru',
-            'tiktok_handle' => '@slim_advance_peru'
+            'tiktok_handle' => '@slim_advance_peru',
+            'schedule' => 'Lunes a Sábado de 9:00 a.m. a 6:00 p.m.'
         ];
 
         $products = [
@@ -41,6 +42,43 @@ class ProductController extends Controller
                     '1 Ice Therapy NF (Gel criogénico modelador 250g)'
                 ],
                 'popular' => true
+            ],
+            [
+                'id' => 'super-pack-30-ice',
+                'name' => 'SUPER PACK X30 DÍAS + ICE THERAPY',
+                'tagline' => '#SlimAdvanceTúAliado',
+                'category' => 'super-packs',
+                'price' => 310,
+                'duration' => '30 Días',
+                'badge' => '🌟 PACK COMPLETO CON CRIOTERAPIA',
+                'image' => 'assets/images/super-pack-30-dias-ice-therapy.jpg',
+                'shortDesc' => 'Mes completo de tratamiento intensivo con gel criogénico modelador Ice Therapy NF incluido.',
+                'includes' => [
+                    '1 Slim ADVANCE (Tratamiento para 30 días)',
+                    '1 Thermote Premium (té dietético adelgazante natural)',
+                    '1 Pack Detox',
+                    '1 Limpia Colon (limpia y desintoxica tu colon)',
+                    '1 Ice Therapy NF (Gel modelador de acción criogénica 250g)'
+                ],
+                'popular' => true
+            ],
+            [
+                'id' => 'super-pack-30',
+                'name' => 'SUPER PACK X30 DÍAS (CLÁSICO)',
+                'tagline' => '#SlimAdvanceTúAliado',
+                'category' => 'super-packs',
+                'price' => 280,
+                'duration' => '30 Días',
+                'badge' => '🔥 TRATAMIENTO MES COMPLETO',
+                'image' => 'assets/images/super-pack-30-dias.jpg',
+                'shortDesc' => 'Tratamiento integral de 30 días para una transformación progresiva y desintoxicación total.',
+                'includes' => [
+                    '1 Slim ADVANCE (cápsulas)',
+                    '1 Thermote Premium (té quemagrasa natural)',
+                    '1 Pack Detox',
+                    '1 Limpia Colon'
+                ],
+                'popular' => false
             ],
             [
                 'id' => 'super-pack-7',
@@ -67,7 +105,7 @@ class ProductController extends Controller
                 'category' => 'trio-completo',
                 'price' => 360,
                 'duration' => '30 Días',
-                'badge' => '🔥 MÁXIMA PÉRDIDA: 8 A 12 KG/MES',
+                'badge' => '🏆 MÁXIMA PÉRDIDA: 8 A 12 KG/MES',
                 'image' => 'assets/images/trio-mega-slim-completo.jpg',
                 'shortDesc' => 'Tratamiento integral de 30 días con moldeador térmico Xtreme Gold para una transformación total.',
                 'includes' => [
@@ -120,7 +158,7 @@ class ProductController extends Controller
                 'category' => 'planes-basicos',
                 'price' => 230,
                 'duration' => '30 Días',
-                'badge' => '🏆 MES COMPLETO RECOMENDADO',
+                'badge' => '🥇 MES COMPLETO RECOMENDADO',
                 'image' => 'assets/images/tratamientos-planes-basicos.jpg',
                 'shortDesc' => 'Tratamiento clásico mensual completo de 30 días con pastillas y limpieza de colon.',
                 'includes' => [

@@ -5,7 +5,7 @@
 
 const WHATSAPP_NUMBER = "51957350532";
 
-// Catálogo de Productos y Tratamientos extraídos de las imágenes oficiales
+// Catálogo Completo de Productos y Tratamientos extraídos de la carpeta oficial negocioslim
 const productsData = [
   {
     id: "super-pack-15",
@@ -16,8 +16,8 @@ const productsData = [
     duration: "15 Días",
     badge: "⭐ SUPER PACK MÁS VENDIDO",
     image: "assets/images/super-pack-15-dias.jpg",
-    shortDesc: "El combo ideal para quemar grasa, desinflamar y tonificar en 15 días con crioterapia.",
-    fullDesc: "Tratamiento intensivo de choque de 15 días. Combina el poder adelgazante de las cápsulas Slim ADVANCE con la termogénesis del té Thermote, la desintoxicación del colon y el gel criogénico Ice Therapy para reafirmar y moldear la piel.",
+    shortDesc: "El combo ideal para quemar grasa, desinflamar y tonificar en 15 días con gel criogénico.",
+    fullDesc: "Tratamiento intensivo de choque de 15 días. Combina el poder adelgazante de las cápsulas Slim ADVANCE con la termogénesis del té Thermote, la desintoxicación del colon y el gel criogénico Ice Therapy NF para reafirmar y moldear la piel.",
     includes: [
       "1 Slim ADVANCE (fórmula reforzada)",
       "1 Thermote Premium (té dietético quemagrasa)",
@@ -26,6 +26,45 @@ const productsData = [
       "1 Ice Therapy NF (Gel criogénico modelador 250g)"
     ],
     popular: true
+  },
+  {
+    id: "super-pack-30-ice",
+    name: "SUPER PACK X30 DÍAS + ICE THERAPY",
+    tagline: "#SlimAdvanceTúAliado",
+    category: "super-packs",
+    price: 310,
+    duration: "30 Días",
+    badge: "🌟 PACK COMPLETO CON CRIOTERAPIA",
+    image: "assets/images/super-pack-30-dias-ice-therapy.jpg",
+    shortDesc: "Mes completo de tratamiento intensivo con gel criogénico modelador Ice Therapy NF incluido.",
+    fullDesc: "El plan mensual más solicitado para perder peso y reducir medidas. Incluye el tratamiento oral de Slim ADVANCE, el té Thermote, el tratamiento detox con limpieza de colon y el gel Ice Therapy NF para potenciar la quema de grasa localizada y evitar flacidez.",
+    includes: [
+      "1 Slim ADVANCE (Tratamiento para 30 días)",
+      "1 Thermote Premium (té dietético adelgazante natural)",
+      "1 Pack Detox",
+      "1 Limpia Colon (limpia y desintoxica tu colon)",
+      "1 Ice Therapy NF (Gel modelador de acción criogénica 250g)"
+    ],
+    popular: true
+  },
+  {
+    id: "super-pack-30",
+    name: "SUPER PACK X30 DÍAS (CLÁSICO)",
+    tagline: "#SlimAdvanceTúAliado",
+    category: "super-packs",
+    price: 280,
+    duration: "30 Días",
+    badge: "🔥 TRATAMIENTO MES COMPLETO",
+    image: "assets/images/super-pack-30-dias.jpg",
+    shortDesc: "Tratamiento integral de 30 días para una transformación progresiva y desintoxicación total.",
+    fullDesc: "Pack mensual diseñado para quienes buscan una desintoxicación profunda y quema de grasa constante durante 30 días sin gel criogénico. Resultados comprobados y acompañamiento continuo.",
+    includes: [
+      "1 Slim ADVANCE (cápsulas)",
+      "1 Thermote Premium (té quemagrasa natural)",
+      "1 Pack Detox",
+      "1 Limpia Colon"
+    ],
+    popular: false
   },
   {
     id: "super-pack-7",
@@ -53,7 +92,7 @@ const productsData = [
     category: "trio-completo",
     price: 360,
     duration: "30 Días",
-    badge: "🔥 MÁXIMA PÉRDIDA: 8 A 12 KG/MES",
+    badge: "🏆 MÁXIMA PÉRDIDA: 8 A 12 KG/MES",
     image: "assets/images/trio-mega-slim-completo.jpg",
     shortDesc: "Tratamiento integral de 30 días con moldeador térmico Xtreme Gold para una transformación total.",
     fullDesc: "Nuestro tratamiento más potente y completo para un mes entero. Con este trío podrás reducir medidas drásticamente y bajar entre 8kg y 12kg al mes siguiendo las indicaciones con asesoramiento continuo.",
@@ -109,7 +148,7 @@ const productsData = [
     category: "planes-basicos",
     price: 230,
     duration: "30 Días",
-    badge: "🏆 MES COMPLETO RECOMENDADO",
+    badge: "🥇 MES COMPLETO RECOMENDADO",
     image: "assets/images/tratamientos-planes-basicos.jpg",
     shortDesc: "Tratamiento clásico mensual completo de 30 días con pastillas y limpieza de colon.",
     fullDesc: "Tratamiento integral de 1 mes completo con 30 pastillas de Slim Advance y desintoxicación de colon. Garantiza una pérdida de peso progresiva, natural y duradera sin efecto rebote.",
@@ -233,7 +272,7 @@ function renderProducts(filterCategory = "all") {
                 class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl transition duration-200 text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
                 title="Comprar directo por WhatsApp"
               >
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.769.814 2.792.815 3.182 0 5.77-2.587 5.77-5.768 0-3.18-2.587-5.769-5.77-5.769zm3.364 8.163c-.14.394-.74.743-1.026.791-.286.049-.652.072-1.054-.058-.403-.131-.926-.302-1.603-.687-1.127-.641-1.859-1.782-1.916-1.859-.057-.076-.462-.614-.462-1.171 0-.557.291-.831.395-.945.104-.114.229-.143.305-.143.077 0 .153.001.22.004.072.003.167-.027.26.196.096.229.324.791.353.849.029.058.048.125.01.201-.039.076-.058.124-.115.191-.057.067-.121.149-.172.2-.057.057-.117.119-.05.234.067.114.298.492.639.796.44.392.812.513.927.57.114.057.181.048.248-.029.067-.076.286-.334.363-.448.076-.115.153-.096.258-.057.105.038.669.315.784.372.114.057.191.086.22.134.028.048.028.277-.112.671z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.769.814 2.792.815 3.182 0 5.77-2.587 5.77-5.768 0-3.18-2.587-5.769-5.77-5.769zm3.364 8.163c-.14.394-.74.743-1.026.791-.286.049-.652.072-1.054-.058-.403-.131-.926-.302-1.603-.687-1.127-.641-1.859-1.782-1.916-1.859-.057-.076-.462-.614-.462-1.171 0-.557.291-.831.395-.945.104-.114.229-.143.305-.143.077 0 .153.001.22.004.072.003.167-.027.26.196.096.229.324.791.353.849.029.058.048.125.01.201-.039.076-.058.124-.115.191-.057.067-.121.149-.172.2-.057.057-.117.119-.05.234.067.114.298.492.639.796.44.392.812.513.927.57.114.057.191.086.22.134.028.048.028.277-.112.671z"/></svg>
                 <span>Pedir</span>
               </button>
 
@@ -285,7 +324,6 @@ function toggleProductSelection(productId) {
     selectedProducts[productId] = 1;
   }
   updateCartUI();
-  // Refrescar vista actual
   const activeBtn = document.querySelector(".filter-btn.bg-sky-600");
   const category = activeBtn ? activeBtn.getAttribute("data-category") : "all";
   renderProducts(category);
@@ -499,7 +537,7 @@ function openProductModal(productId) {
             onclick="sendSingleProductWhatsApp('${product.id}')"
             class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md transition duration-200"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.769.814 2.792.815 3.182 0 5.77-2.587 5.77-5.768 0-3.18-2.587-5.769-5.77-5.769zm3.364 8.163c-.14.394-.74.743-1.026.791-.286.049-.652.072-1.054-.058-.403-.131-.926-.302-1.603-.687-1.127-.641-1.859-1.782-1.916-1.859-.057-.076-.462-.614-.462-1.171 0-.557.291-.831.395-.945.104-.114.229-.143.305-.143.077 0 .153.001.22.004.072.003.167-.027.26.196.096.229.324.791.353.849.029.058.048.125.01.201-.039.076-.058.124-.115.191-.057.067-.121.149-.172.2-.057.057-.117.119-.05.234.067.114.298.492.639.796.44.392.812.513.927.57.114.057.181.048.248-.029.067-.076.286-.334.363-.448.076-.115.153-.096.258-.057.105.038.669.315.784.372.114.057.191.086.22.134.028.048.028.277-.112.671z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.769.814 2.792.815 3.182 0 5.77-2.587 5.77-5.768 0-3.18-2.587-5.769-5.77-5.769zm3.364 8.163c-.14.394-.74.743-1.026.791-.286.049-.652.072-1.054-.058-.403-.131-.926-.302-1.603-.687-1.127-.641-1.859-1.782-1.916-1.859-.057-.076-.462-.614-.462-1.171 0-.557.291-.831.395-.945.104-.114.229-.143.305-.143.077 0 .153.001.22.004.072.003.167-.027.26.196.096.229.324.791.353.849.029.058.048.125.01.201-.039.076-.058.124-.115.191-.057.067-.121.149-.172.2-.057.057-.117.119-.05.234.067.114.298.492.639.796.44.392.812.513.927.57.114.057.191.086.22.134.028.048.028.277-.112.671z"/></svg>
             Pedir ahora por WhatsApp
           </button>
           <button 
