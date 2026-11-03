@@ -1,0 +1,101 @@
+/* Slim ADVANCE - Custom Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --brand-primary: #0284c7;
+  --brand-primary-dark: #0369a1;
+  --brand-accent: #84cc16;
+  --brand-accent-dark: #65a30d;
+  --brand-whatsapp: #25D366;
+  --brand-whatsapp-hover: #128C7E;
+  --brand-red-price: #dc2626;
+  --brand-dark: #0f172a;
+  --brand-bg: #f8fafc;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-dark);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism effects */
+.glass-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* Custom badge badge animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+    transform: scale(1.03);
+  }
+}
+
+.whatsapp-pulse-btn {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Product Card Hover Transitions */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(2, 132, 199, 0.15), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Price Stamp Badge like the original image */
+.price-stamp {
+  position: relative;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
+  color: #fff;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.35);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.1;
+  padding: 0.5rem 1rem;
+}
+
+/* Soft leaf background pattern */
+.bg-mesh-radial {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(132, 204, 22, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(240, 253, 244, 0.5) 0%, transparent 100%);
+}
+
+/* Smooth modal transitions */
+.modal-overlay {
+  transition: opacity 0.25s ease-out;
+}
+
+.modal-content-box {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating cart bar for mobile & desktop */
+.floating-quote-bar {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
